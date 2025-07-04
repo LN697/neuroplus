@@ -10,9 +10,9 @@
 
 int main() {
     NeuralNet net;
-    
+
     net.addLayer(std::make_unique<Dense>(2, 10));
-    net.addLayer(std::make_unique<Activation>(Utils::tanh, Utils::tanh_derivative));
+    net.addLayer(std::make_unique<Activation>(Utils::relu, Utils::relu_derivative));
     net.addLayer(std::make_unique<Dense>(10, 1));
     net.addLayer(std::make_unique<Activation>(Utils::sigmoid, Utils::sigmoid_derivative));
 
