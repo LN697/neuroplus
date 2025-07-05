@@ -2,7 +2,7 @@
 
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -Wall -Wextra -Wpedantic -std=c++17 -O2 -g
+CXXFLAGS = -Wall -Wextra -Wpedantic -std=c++17 -O3
 INCLUDES = -Iinclude
 LDFLAGS = -lm
 
