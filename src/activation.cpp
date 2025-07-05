@@ -21,3 +21,7 @@ std::vector<double> Activation::backward(const std::vector<double>& grad_output,
 
     return grad_input;
 }
+
+std::unique_ptr<Layer> Activation::clone() const {
+    return std::make_unique<Activation>(*this);
+}

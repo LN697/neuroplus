@@ -23,8 +23,10 @@ int main() {
 
     net.train(X, Y, 10000, 0.1);
 
+    NeuralNet netcpy(net);
+
     for (const auto& input : X) {
-        auto output = net.predict(input);
+        auto output = netcpy.predict(input);
         std::cout << "Input: (" << input[0] << ", " << input[1] << ") => Output: " << output[0] << std::endl;
     }
 

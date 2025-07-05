@@ -14,4 +14,12 @@ class NeuralNet {
         void setLoss(std::shared_ptr<Loss> loss);
         std::vector<double> predict(const std::vector<double>& input);
         void train(const std::vector<std::vector<double>>& inputs, const std::vector<std::vector<double>>& targets, int epochs, double learning_rate);
+
+        NeuralNet() = default;
+        NeuralNet(const NeuralNet& other);
+
+        void save(const std::string& filename) const;
+        void load(const std::string& filename);
+
+        ~NeuralNet() = default;
 };

@@ -30,3 +30,22 @@ void NeuralNet::train(const std::vector<std::vector<double>>& inputs, const std:
         }
     }
 }
+
+NeuralNet::NeuralNet(const NeuralNet& other) {
+    for (const auto& layer : other.layers) {
+        layers.push_back(std::shared_ptr<Layer>(layer->clone()));
+    }
+    if (other.loss_function) {
+        loss_function = std::shared_ptr<Loss>(other.loss_function->clone());
+    } else {
+        loss_function = nullptr;
+    }
+}
+
+void NeuralNet::save(const std::string& filename) const {
+    // Not implemented in this example
+}
+
+void NeuralNet::load(const std::string& filename) {
+    // Not implemented in this example
+}

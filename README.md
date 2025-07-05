@@ -6,7 +6,7 @@ NeuroPlus is a comprehensive project aimed at developing a C++ based neural netw
 
 - Modular architecture for easy extension
 - Support for multiple neural network architectures
-- Real-time data processing
+- Fast data processing
 - Extensive documentation and examples
 
 ## Getting Started

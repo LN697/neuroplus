@@ -40,3 +40,7 @@ std::vector<double> Dense::backward(const std::vector<double>& grad_output, doub
     
     return grad_input;
 }
+
+std::unique_ptr<Layer> Dense::clone() const {
+    return std::make_unique<Dense>(*this);
+}

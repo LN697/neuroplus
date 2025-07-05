@@ -28,3 +28,7 @@ std::vector<double> MSELoss::gradient(const std::vector<double>& predicted, cons
     
     return grad;
 }
+
+std::unique_ptr<Loss> MSELoss::clone() const {
+    return std::make_unique<MSELoss>(*this);
+}
