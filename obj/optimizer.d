@@ -1,1 +1,2 @@
-obj/optimizer.o: src/optimizer.cpp
+obj/optimizer.o: src/optimizer.cpp include/optimizer.hpp
+include/optimizer.hpp:

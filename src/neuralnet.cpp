@@ -1,4 +1,5 @@
 #include "neuralnet.hpp"
+#include <iostream>
 
 void NeuralNet::addLayer(std::shared_ptr<Layer> layer) {
     layers.push_back(layer);
@@ -22,11 +23,18 @@ void NeuralNet::train(const std::vector<std::vector<double>>& inputs, const std:
         double total_loss = 0.0;
         for (size_t i = 0; i < inputs.size(); ++i) {
             std::vector<double> output = predict(inputs[i]);
-            total_loss += loss_function->compute(output, targets[i]);
+
+            double loss = loss_function->compute(output, targets[i]);
+            total_loss += loss;
+            
             std::vector<double> grad = loss_function->gradient(output, targets[i]);
             for (int j = layers.size() - 1; j >= 0; --j) {
                 grad = layers[j]->backward(grad, learning_rate);
             }
+        }
+        
+        if (epoch % 1000 == 0) {
+            std::cout << "Epoch " << epoch << ", Average Loss: " << total_loss / inputs.size() << std::endl;
         }
     }
 }
