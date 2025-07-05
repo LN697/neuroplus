@@ -9,6 +9,8 @@
 #include <memory>
 
 int main() {
+    Utils::initialize_random_seed();
+    
     NeuralNet net;
 
     net.addLayer(std::make_unique<Dense>(2, 10));

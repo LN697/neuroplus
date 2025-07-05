@@ -1,6 +1,7 @@
 #include "utils.hpp"
 #include <cmath>
 #include <cstdlib>
+#include <ctime>
 
 namespace Utils {
     double sigmoid(double x) {
@@ -10,6 +11,10 @@ namespace Utils {
     double sigmoid_derivative(double x) {
         double s = sigmoid(x);
         return s * (1.0 - s);
+    }
+
+    void initialize_random_seed() {
+        std::srand(static_cast<unsigned>(std::time(nullptr)));
     }
 
     double random_weight() {
