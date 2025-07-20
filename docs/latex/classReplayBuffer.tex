@@ -1,0 +1,122 @@
+\hypertarget{classReplayBuffer}{}\doxysection{Replay\+Buffer Class Reference}
+\label{classReplayBuffer}\index{ReplayBuffer@{ReplayBuffer}}
+
+
+A circular buffer for storing experiences for experience replay.  
+
+
+
+
+{\ttfamily \#include $<$replay\+\_\+buffer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classReplayBuffer_a76111db85b7e39ce0d2cfa4ece35ce21}{Replay\+Buffer}} (size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a replay buffer with the specified capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplayBuffer_a7a0fda98dbc68a0007da8102f261578e}{push}} (const \mbox{\hyperlink{structExperience}{Experience}} \&experience)
+\begin{DoxyCompactList}\small\item\em Adds an experience to the buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structExperience}{Experience}} $>$ \mbox{\hyperlink{classReplayBuffer_a9fb58babd0a2ba7a6c82b38681959067}{sample}} (size\+\_\+t batch\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Samples a batch of experiences randomly from the buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classReplayBuffer_a2d16ba7cb627aab5095ca8dbb50c4f79}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current number of experiences in the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReplayBuffer_a0f3ed89a4b14e687c516e6db8b848789}{is\+\_\+ready}} (size\+\_\+t batch\+\_\+size) const
+\begin{DoxyCompactList}\small\item\em Checks if the buffer has enough experiences for sampling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A circular buffer for storing experiences for experience replay. 
+
+This class implements a replay buffer that stores experiences and allows random sampling from them for training reinforcement learning agents. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classReplayBuffer_a76111db85b7e39ce0d2cfa4ece35ce21}\label{classReplayBuffer_a76111db85b7e39ce0d2cfa4ece35ce21}} 
+\index{ReplayBuffer@{ReplayBuffer}!ReplayBuffer@{ReplayBuffer}}
+\index{ReplayBuffer@{ReplayBuffer}!ReplayBuffer@{ReplayBuffer}}
+\doxysubsubsection{\texorpdfstring{ReplayBuffer()}{ReplayBuffer()}}
+{\footnotesize\ttfamily Replay\+Buffer\+::\+Replay\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a replay buffer with the specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The maximum number of experiences the buffer can hold. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReplayBuffer_a0f3ed89a4b14e687c516e6db8b848789}\label{classReplayBuffer_a0f3ed89a4b14e687c516e6db8b848789}} 
+\index{ReplayBuffer@{ReplayBuffer}!is\_ready@{is\_ready}}
+\index{is\_ready@{is\_ready}!ReplayBuffer@{ReplayBuffer}}
+\doxysubsubsection{\texorpdfstring{is\_ready()}{is\_ready()}}
+{\footnotesize\ttfamily bool Replay\+Buffer\+::is\+\_\+ready (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{batch\+\_\+size }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the buffer has enough experiences for sampling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+\_\+size} & The batch size to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the buffer has at least batch\+\_\+size experiences, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReplayBuffer_a7a0fda98dbc68a0007da8102f261578e}\label{classReplayBuffer_a7a0fda98dbc68a0007da8102f261578e}} 
+\index{ReplayBuffer@{ReplayBuffer}!push@{push}}
+\index{push@{push}!ReplayBuffer@{ReplayBuffer}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Replay\+Buffer\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structExperience}{Experience}} \&}]{experience }\end{DoxyParamCaption})}
+
+
+
+Adds an experience to the buffer. 
+
+If the buffer is full, the oldest experience will be overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em experience} & The experience to add to the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReplayBuffer_a9fb58babd0a2ba7a6c82b38681959067}\label{classReplayBuffer_a9fb58babd0a2ba7a6c82b38681959067}} 
+\index{ReplayBuffer@{ReplayBuffer}!sample@{sample}}
+\index{sample@{sample}!ReplayBuffer@{ReplayBuffer}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structExperience}{Experience}} $>$ Replay\+Buffer\+::sample (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{batch\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Samples a batch of experiences randomly from the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+\_\+size} & The number of experiences to sample. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of sampled experiences. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReplayBuffer_a2d16ba7cb627aab5095ca8dbb50c4f79}\label{classReplayBuffer_a2d16ba7cb627aab5095ca8dbb50c4f79}} 
+\index{ReplayBuffer@{ReplayBuffer}!size@{size}}
+\index{size@{size}!ReplayBuffer@{ReplayBuffer}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Replay\+Buffer\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current number of experiences in the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The number of experiences currently stored. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{replay__buffer_8hpp}{replay\+\_\+buffer.\+hpp}}\item 
+src/\mbox{\hyperlink{replay__buffer_8cpp}{replay\+\_\+buffer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="SGD" name="SGD">
+<area shape="rect" id="node1" title="Stochastic Gradient Descent optimizer with momentum." alt="" coords="23,80,74,107"/>
+<area shape="rect" id="node2" href="$classOptimizer.html" title="Base abstract class for optimization algorithms." alt="" coords="5,5,92,32"/>
+</map>

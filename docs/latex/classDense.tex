@@ -1,0 +1,154 @@
+\hypertarget{classDense}{}\doxysection{Dense Class Reference}
+\label{classDense}\index{Dense@{Dense}}
+
+
+Fully-\/connected (dense) layer for neural networks.  
+
+
+
+
+{\ttfamily \#include $<$dense.\+hpp$>$}
+
+
+
+Inheritance diagram for Dense\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classDense__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dense\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classDense__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDense_aef4c3d577579b598ded83283dc744501}{Dense}} (int input\+\_\+size, int output\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classDense}{Dense}} layer with specified input and output sizes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDense_a4314847d45d5196a543da8556f76667f}{set\+Optimizer}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ optimizer)
+\begin{DoxyCompactList}\small\item\em Sets the optimizer for this layer. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classDense_a36f8eb116c1f1e51937992bc59b9f4c6}{forward}} (const std\+::vector$<$ double $>$ \&input) override
+\begin{DoxyCompactList}\small\item\em Computes the forward pass through this layer. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classDense_ae16d69775b83b8124ddd2abd77f3f2df}{backward}} (const std\+::vector$<$ double $>$ \&grad\+\_\+output, double learning\+\_\+rate) override
+\begin{DoxyCompactList}\small\item\em Computes the backward pass through this layer. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ \mbox{\hyperlink{classDense_a7f77665958b07bf8ed39dd11d7bda278}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fully-\/connected (dense) layer for neural networks. 
+
+This layer implements a fully-\/connected layer where each input is connected to each output through weights. Each output also has a bias term. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDense_aef4c3d577579b598ded83283dc744501}\label{classDense_aef4c3d577579b598ded83283dc744501}} 
+\index{Dense@{Dense}!Dense@{Dense}}
+\index{Dense@{Dense}!Dense@{Dense}}
+\doxysubsubsection{\texorpdfstring{Dense()}{Dense()}}
+{\footnotesize\ttfamily Dense\+::\+Dense (\begin{DoxyParamCaption}\item[{int}]{input\+\_\+size,  }\item[{int}]{output\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classDense}{Dense}} layer with specified input and output sizes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+size} & The size of the input vector. \\
+\hline
+{\em output\+\_\+size} & The size of the output vector. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDense_ae16d69775b83b8124ddd2abd77f3f2df}\label{classDense_ae16d69775b83b8124ddd2abd77f3f2df}} 
+\index{Dense@{Dense}!backward@{backward}}
+\index{backward@{backward}!Dense@{Dense}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Dense\+::backward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{grad\+\_\+output,  }\item[{double}]{learning\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the backward pass through this layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grad\+\_\+output} & The gradient from the next layer. \\
+\hline
+{\em learning\+\_\+rate} & The learning rate for parameter updates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient to pass to the previous layer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_a5560b9ac23c2cd64dfcc834b08c34bf5}{Layer}}.
+
+\mbox{\Hypertarget{classDense_a7f77665958b07bf8ed39dd11d7bda278}\label{classDense_a7f77665958b07bf8ed39dd11d7bda278}} 
+\index{Dense@{Dense}!clone@{clone}}
+\index{clone@{clone}!Dense@{Dense}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ Dense\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of this layer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this layer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_a9e0e65568aa19b9ab07ee3b75f0e500c}{Layer}}.
+
+\mbox{\Hypertarget{classDense_a36f8eb116c1f1e51937992bc59b9f4c6}\label{classDense_a36f8eb116c1f1e51937992bc59b9f4c6}} 
+\index{Dense@{Dense}!forward@{forward}}
+\index{forward@{forward}!Dense@{Dense}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Dense\+::forward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the forward pass through this layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_afbd13bc01abb4d1a53282f35724f02c6}{Layer}}.
+
+\mbox{\Hypertarget{classDense_a4314847d45d5196a543da8556f76667f}\label{classDense_a4314847d45d5196a543da8556f76667f}} 
+\index{Dense@{Dense}!setOptimizer@{setOptimizer}}
+\index{setOptimizer@{setOptimizer}!Dense@{Dense}}
+\doxysubsubsection{\texorpdfstring{setOptimizer()}{setOptimizer()}}
+{\footnotesize\ttfamily void Dense\+::set\+Optimizer (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$}]{optimizer }\end{DoxyParamCaption})}
+
+
+
+Sets the optimizer for this layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optimizer} & The optimizer to use for updating weights and biases. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{dense_8hpp}{dense.\+hpp}}\item 
+src/\mbox{\hyperlink{dense_8cpp}{dense.\+cpp}}\end{DoxyCompactItemize}

@@ -86,10 +86,9 @@ std::unique_ptr<Layer> Dense::clone() const {
     cloned->biases = biases;
     cloned->input_cache = input_cache;
     if (weight_optimizer) {
-        cloned->weight_optimizer = weight_optimizer->clone();
+        std::unique_ptr<Optimizer> optimizer = weight_optimizer->clone();
+        cloned->setOptimizer(std::move(optimizer));
     }
-    if (bias_optimizer) {
-        cloned->bias_optimizer = bias_optimizer->clone();
-    }
+    
     return cloned;
 }

@@ -1,0 +1,87 @@
+\hypertarget{structExperience}{}\doxysection{Experience Struct Reference}
+\label{structExperience}\index{Experience@{Experience}}
+
+
+Structure representing a single experience for reinforcement learning.  
+
+
+
+
+{\ttfamily \#include $<$replay\+\_\+buffer.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{structExperience_adc797216591b7ebf0dfacd222991bc29}{state}}
+\begin{DoxyCompactList}\small\item\em The state before taking the action. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structExperience_a0127dd91610258baf811416fdd97559e}{action}}
+\begin{DoxyCompactList}\small\item\em The action taken. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structExperience_a404487222c1cf1251390739760f0f8ae}{reward}}
+\begin{DoxyCompactList}\small\item\em The reward received after taking the action. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{structExperience_a7c2170c872bc3056e14b3500456413a2}{next\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em The state after taking the action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structExperience_a732411fc59a921bdf0fa8a408044e719}{done}}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the episode ended after this transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a single experience for reinforcement learning. 
+
+This structure stores the state, action, reward, next state, and done flag that constitute a transition in a reinforcement learning environment. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structExperience_a0127dd91610258baf811416fdd97559e}\label{structExperience_a0127dd91610258baf811416fdd97559e}} 
+\index{Experience@{Experience}!action@{action}}
+\index{action@{action}!Experience@{Experience}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily int Experience\+::action}
+
+
+
+The action taken. 
+
+\mbox{\Hypertarget{structExperience_a732411fc59a921bdf0fa8a408044e719}\label{structExperience_a732411fc59a921bdf0fa8a408044e719}} 
+\index{Experience@{Experience}!done@{done}}
+\index{done@{done}!Experience@{Experience}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily bool Experience\+::done}
+
+
+
+Flag indicating if the episode ended after this transition. 
+
+\mbox{\Hypertarget{structExperience_a7c2170c872bc3056e14b3500456413a2}\label{structExperience_a7c2170c872bc3056e14b3500456413a2}} 
+\index{Experience@{Experience}!next\_state@{next\_state}}
+\index{next\_state@{next\_state}!Experience@{Experience}}
+\doxysubsubsection{\texorpdfstring{next\_state}{next\_state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Experience\+::next\+\_\+state}
+
+
+
+The state after taking the action. 
+
+\mbox{\Hypertarget{structExperience_a404487222c1cf1251390739760f0f8ae}\label{structExperience_a404487222c1cf1251390739760f0f8ae}} 
+\index{Experience@{Experience}!reward@{reward}}
+\index{reward@{reward}!Experience@{Experience}}
+\doxysubsubsection{\texorpdfstring{reward}{reward}}
+{\footnotesize\ttfamily double Experience\+::reward}
+
+
+
+The reward received after taking the action. 
+
+\mbox{\Hypertarget{structExperience_adc797216591b7ebf0dfacd222991bc29}\label{structExperience_adc797216591b7ebf0dfacd222991bc29}} 
+\index{Experience@{Experience}!state@{state}}
+\index{state@{state}!Experience@{Experience}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Experience\+::state}
+
+
+
+The state before taking the action. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{replay__buffer_8hpp}{replay\+\_\+buffer.\+hpp}}\end{DoxyCompactItemize}

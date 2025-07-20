@@ -1,0 +1,93 @@
+\hypertarget{classOptimizer}{}\doxysection{Optimizer Class Reference}
+\label{classOptimizer}\index{Optimizer@{Optimizer}}
+
+
+Base abstract class for optimization algorithms.  
+
+
+
+
+{\ttfamily \#include $<$optimizer.\+hpp$>$}
+
+
+
+Inheritance diagram for Optimizer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classOptimizer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classOptimizer_a241b55978b42038e5a071d555dfd047d}{update}} (std\+::vector$<$ double $>$ \&weights, const std\+::vector$<$ double $>$ \&gradients)=0
+\begin{DoxyCompactList}\small\item\em Updates weights based on gradients. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ \mbox{\hyperlink{classOptimizer_a36eb62b708643313e48ce6fd2dd5d63e}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this optimizer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classOptimizer_a29eeb57d268354286bf7673f70c24b5c}{$\sim$\+Optimizer}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base abstract class for optimization algorithms. 
+
+This abstract class defines the interface that all optimizer implementations must follow. Optimizers are used to update weights based on gradients during training. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOptimizer_a29eeb57d268354286bf7673f70c24b5c}\label{classOptimizer_a29eeb57d268354286bf7673f70c24b5c}} 
+\index{Optimizer@{Optimizer}!````~Optimizer@{$\sim$Optimizer}}
+\index{````~Optimizer@{$\sim$Optimizer}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Optimizer()}{~Optimizer()}}
+{\footnotesize\ttfamily virtual Optimizer\+::$\sim$\+Optimizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper cleanup in derived classes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOptimizer_a36eb62b708643313e48ce6fd2dd5d63e}\label{classOptimizer_a36eb62b708643313e48ce6fd2dd5d63e}} 
+\index{Optimizer@{Optimizer}!clone@{clone}}
+\index{clone@{clone}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classOptimizer}{Optimizer}}$>$ Optimizer\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a deep copy of this optimizer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this optimizer. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAdam_a53240425f2750af5c2936dbf766554fa}{Adam}}, and \mbox{\hyperlink{classSGD_a92e7b791890bc9f2df0f2d388e41bdc0}{SGD}}.
+
+\mbox{\Hypertarget{classOptimizer_a241b55978b42038e5a071d555dfd047d}\label{classOptimizer_a241b55978b42038e5a071d555dfd047d}} 
+\index{Optimizer@{Optimizer}!update@{update}}
+\index{update@{update}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Optimizer\+::update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{weights,  }\item[{const std\+::vector$<$ double $>$ \&}]{gradients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates weights based on gradients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weights} & The weights to update. \\
+\hline
+{\em gradients} & The gradients used for the update. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classAdam_a42ac4f035adcc08ddc633e3d9b2cd7b2}{Adam}}, and \mbox{\hyperlink{classSGD_ab109f596da52b11d693afe43c4d9b7eb}{SGD}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{optimizer_8hpp}{optimizer.\+hpp}}\end{DoxyCompactItemize}

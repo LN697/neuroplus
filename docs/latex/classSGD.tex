@@ -1,0 +1,110 @@
+\hypertarget{classSGD}{}\doxysection{SGD Class Reference}
+\label{classSGD}\index{SGD@{SGD}}
+
+
+Stochastic Gradient Descent optimizer with momentum.  
+
+
+
+
+{\ttfamily \#include $<$optimizer.\+hpp$>$}
+
+
+
+Inheritance diagram for SGD\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classSGD__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for SGD\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classSGD__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSGD_a39f8c03228873a86d6a347891c6347b4}{SGD}} (double lr, double mom=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classSGD}{SGD}} optimizer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSGD_ab109f596da52b11d693afe43c4d9b7eb}{update}} (std\+::vector$<$ double $>$ \&weights, const std\+::vector$<$ double $>$ \&gradients) override
+\begin{DoxyCompactList}\small\item\em Updates weights using \mbox{\hyperlink{classSGD}{SGD}} with momentum. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ \mbox{\hyperlink{classSGD_a92e7b791890bc9f2df0f2d388e41bdc0}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this optimizer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stochastic Gradient Descent optimizer with momentum. 
+
+This optimizer implements the standard \mbox{\hyperlink{classSGD}{SGD}} algorithm with momentum support. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSGD_a39f8c03228873a86d6a347891c6347b4}\label{classSGD_a39f8c03228873a86d6a347891c6347b4}} 
+\index{SGD@{SGD}!SGD@{SGD}}
+\index{SGD@{SGD}!SGD@{SGD}}
+\doxysubsubsection{\texorpdfstring{SGD()}{SGD()}}
+{\footnotesize\ttfamily SGD\+::\+SGD (\begin{DoxyParamCaption}\item[{double}]{lr,  }\item[{double}]{mom = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classSGD}{SGD}} optimizer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lr} & The learning rate. \\
+\hline
+{\em mom} & The momentum coefficient. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSGD_a92e7b791890bc9f2df0f2d388e41bdc0}\label{classSGD_a92e7b791890bc9f2df0f2d388e41bdc0}} 
+\index{SGD@{SGD}!clone@{clone}}
+\index{clone@{clone}!SGD@{SGD}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ SGD\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of this optimizer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this optimizer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classOptimizer_a36eb62b708643313e48ce6fd2dd5d63e}{Optimizer}}.
+
+\mbox{\Hypertarget{classSGD_ab109f596da52b11d693afe43c4d9b7eb}\label{classSGD_ab109f596da52b11d693afe43c4d9b7eb}} 
+\index{SGD@{SGD}!update@{update}}
+\index{update@{update}!SGD@{SGD}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void SGD\+::update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{weights,  }\item[{const std\+::vector$<$ double $>$ \&}]{gradients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates weights using \mbox{\hyperlink{classSGD}{SGD}} with momentum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weights} & The weights to update. \\
+\hline
+{\em gradients} & The gradients used for the update. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOptimizer_a241b55978b42038e5a071d555dfd047d}{Optimizer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{optimizer_8hpp}{optimizer.\+hpp}}\item 
+src/\mbox{\hyperlink{optimizer_8cpp}{optimizer.\+cpp}}\end{DoxyCompactItemize}

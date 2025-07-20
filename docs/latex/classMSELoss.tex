@@ -1,0 +1,117 @@
+\hypertarget{classMSELoss}{}\doxysection{MSELoss Class Reference}
+\label{classMSELoss}\index{MSELoss@{MSELoss}}
+
+
+Mean Squared Error (MSE) loss function.  
+
+
+
+
+{\ttfamily \#include $<$loss.\+hpp$>$}
+
+
+
+Inheritance diagram for MSELoss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classMSELoss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for MSELoss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classMSELoss__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classMSELoss_a9e52f1a36613388c5efa11374a88cd28}{compute}} (const std\+::vector$<$ double $>$ \&predicted, const std\+::vector$<$ double $>$ \&actual) override
+\begin{DoxyCompactList}\small\item\em Computes the MSE loss. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classMSELoss_af7ee0b872c6dda29eac63c4d30e02da8}{gradient}} (const std\+::vector$<$ double $>$ \&predicted, const std\+::vector$<$ double $>$ \&actual) override
+\begin{DoxyCompactList}\small\item\em Computes the gradient of the MSE loss. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLoss}{Loss}} $>$ \mbox{\hyperlink{classMSELoss_abfb218fc4dcc0662647ae188f2f887ca}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this loss function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mean Squared Error (MSE) loss function. 
+
+The MSE loss computes the average squared difference between predicted and actual values. It is commonly used for regression problems. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMSELoss_abfb218fc4dcc0662647ae188f2f887ca}\label{classMSELoss_abfb218fc4dcc0662647ae188f2f887ca}} 
+\index{MSELoss@{MSELoss}!clone@{clone}}
+\index{clone@{clone}!MSELoss@{MSELoss}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLoss}{Loss}} $>$ MSELoss\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of this loss function. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this loss function. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLoss_a69df253d0469f8b9edb795585266b95f}{Loss}}.
+
+\mbox{\Hypertarget{classMSELoss_a9e52f1a36613388c5efa11374a88cd28}\label{classMSELoss_a9e52f1a36613388c5efa11374a88cd28}} 
+\index{MSELoss@{MSELoss}!compute@{compute}}
+\index{compute@{compute}!MSELoss@{MSELoss}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily double MSELoss\+::compute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{predicted,  }\item[{const std\+::vector$<$ double $>$ \&}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the MSE loss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicted} & The predicted output from the network. \\
+\hline
+{\em actual} & The target (ground truth) output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The MSE loss value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLoss_a85683e840c39b25e7c80fa32a967f986}{Loss}}.
+
+\mbox{\Hypertarget{classMSELoss_af7ee0b872c6dda29eac63c4d30e02da8}\label{classMSELoss_af7ee0b872c6dda29eac63c4d30e02da8}} 
+\index{MSELoss@{MSELoss}!gradient@{gradient}}
+\index{gradient@{gradient}!MSELoss@{MSELoss}}
+\doxysubsubsection{\texorpdfstring{gradient()}{gradient()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ MSELoss\+::gradient (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{predicted,  }\item[{const std\+::vector$<$ double $>$ \&}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the gradient of the MSE loss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicted} & The predicted output from the network. \\
+\hline
+{\em actual} & The target (ground truth) output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLoss_a0e1f633cd9021006a162a0584f0f11de}{Loss}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{loss_8hpp}{loss.\+hpp}}\item 
+src/\mbox{\hyperlink{loss_8cpp}{loss.\+cpp}}\end{DoxyCompactItemize}

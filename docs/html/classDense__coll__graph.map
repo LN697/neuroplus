@@ -1,0 +1,4 @@
+<map id="Dense" name="Dense">
+<area shape="rect" id="node1" title="Fully&#45;connected (dense) layer for neural networks." alt="" coords="5,80,68,107"/>
+<area shape="rect" id="node2" href="$classLayer.html" title="Base abstract class for all neural network layers." alt="" coords="7,5,66,32"/>
+</map>

@@ -52,7 +52,7 @@ int main() {
 
     net.train(X, Y, 10000, 0.1);
 
-    NeuralNet netcpy(net);
+    // NeuralNet netcpy(net);
 
     for (const auto& input : X) {
         auto output = net.predict(input);
@@ -61,13 +61,13 @@ int main() {
         << static_cast<int>(output[2] + 0.5) << std::endl;
     }
 
-    std::cout << "\nTesting copied network:" << std::endl;
-    for (const auto& input : X) {
-        auto output = netcpy.predict(input);
-        std::cout << "Input: 0b" << input[0] << input[1] << " + 0b" << input[2] 
-        << input[3] << " => Output: 0b" << static_cast<int>(output[0] + 0.5) << static_cast<int>(output[1] + 0.5) 
-        << static_cast<int>(output[2] + 0.5) << std::endl;
-    }
+    // std::cout << "\nTesting copied network:" << std::endl;
+    // for (const auto& input : X) {
+    //     auto output = netcpy.predict(input);
+    //     std::cout << "Input: 0b" << input[0] << input[1] << " + 0b" << input[2] 
+    //     << input[3] << " => Output: 0b" << static_cast<int>(output[0] + 0.5) << static_cast<int>(output[1] + 0.5) 
+    //     << static_cast<int>(output[2] + 0.5) << std::endl;
+    // }
 
     return 0;
 }

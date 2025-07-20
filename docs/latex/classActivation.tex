@@ -1,0 +1,137 @@
+\hypertarget{classActivation}{}\doxysection{Activation Class Reference}
+\label{classActivation}\index{Activation@{Activation}}
+
+
+\mbox{\hyperlink{classActivation}{Activation}} layer that applies a non-\/linear activation function to inputs.  
+
+
+
+
+{\ttfamily \#include $<$activation.\+hpp$>$}
+
+
+
+Inheritance diagram for Activation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classActivation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Activation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classActivation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classActivation_a433f467642a029f25bee8c3cedc6f20d}{Activation}} (std\+::function$<$ double(double)$>$ act, std\+::function$<$ double(double)$>$ act\+\_\+deriv)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classActivation}{Activation}} layer with the specified activation function and its derivative. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classActivation_a3788ff68e9cb9562448456af6def8284}{forward}} (const std\+::vector$<$ double $>$ \&input) override
+\begin{DoxyCompactList}\small\item\em Applies the activation function to the input. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classActivation_a6933ad3348da56ef287d3246ba72e5fd}{backward}} (const std\+::vector$<$ double $>$ \&grad\+\_\+output, double learning\+\_\+rate) override
+\begin{DoxyCompactList}\small\item\em Computes gradients during backpropagation. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ \mbox{\hyperlink{classActivation_a50b15f527fec2c695257c35fdc5fbe99}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classActivation}{Activation}} layer that applies a non-\/linear activation function to inputs. 
+
+The \mbox{\hyperlink{classActivation}{Activation}} class implements various activation functions like sigmoid, Re\+LU, leaky Re\+LU, and tanh to introduce non-\/linearity into neural networks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classActivation_a433f467642a029f25bee8c3cedc6f20d}\label{classActivation_a433f467642a029f25bee8c3cedc6f20d}} 
+\index{Activation@{Activation}!Activation@{Activation}}
+\index{Activation@{Activation}!Activation@{Activation}}
+\doxysubsubsection{\texorpdfstring{Activation()}{Activation()}}
+{\footnotesize\ttfamily Activation\+::\+Activation (\begin{DoxyParamCaption}\item[{std\+::function$<$ double(double)$>$}]{act,  }\item[{std\+::function$<$ double(double)$>$}]{act\+\_\+deriv }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classActivation}{Activation}} layer with the specified activation function and its derivative. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & The activation function. \\
+\hline
+{\em act\+\_\+deriv} & The derivative of the activation function. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classActivation_a6933ad3348da56ef287d3246ba72e5fd}\label{classActivation_a6933ad3348da56ef287d3246ba72e5fd}} 
+\index{Activation@{Activation}!backward@{backward}}
+\index{backward@{backward}!Activation@{Activation}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Activation\+::backward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{grad\+\_\+output,  }\item[{double}]{learning\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes gradients during backpropagation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grad\+\_\+output} & Gradient from the next layer. \\
+\hline
+{\em learning\+\_\+rate} & The learning rate for parameter updates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient to pass to the previous layer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_a5560b9ac23c2cd64dfcc834b08c34bf5}{Layer}}.
+
+\mbox{\Hypertarget{classActivation_a50b15f527fec2c695257c35fdc5fbe99}\label{classActivation_a50b15f527fec2c695257c35fdc5fbe99}} 
+\index{Activation@{Activation}!clone@{clone}}
+\index{clone@{clone}!Activation@{Activation}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ Activation\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of this layer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this layer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_a9e0e65568aa19b9ab07ee3b75f0e500c}{Layer}}.
+
+\mbox{\Hypertarget{classActivation_a3788ff68e9cb9562448456af6def8284}\label{classActivation_a3788ff68e9cb9562448456af6def8284}} 
+\index{Activation@{Activation}!forward@{forward}}
+\index{forward@{forward}!Activation@{Activation}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Activation\+::forward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the activation function to the input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The activated output vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classLayer_afbd13bc01abb4d1a53282f35724f02c6}{Layer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{activation_8hpp}{activation.\+hpp}}\item 
+src/\mbox{\hyperlink{activation_8cpp}{activation.\+cpp}}\end{DoxyCompactItemize}

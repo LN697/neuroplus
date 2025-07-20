@@ -1,0 +1,120 @@
+\hypertarget{classLayer}{}\doxysection{Layer Class Reference}
+\label{classLayer}\index{Layer@{Layer}}
+
+
+Base abstract class for all neural network layers.  
+
+
+
+
+{\ttfamily \#include $<$layer.\+hpp$>$}
+
+
+
+Inheritance diagram for Layer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classLayer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{classLayer_afbd13bc01abb4d1a53282f35724f02c6}{forward}} (const std\+::vector$<$ double $>$ \&input)=0
+\begin{DoxyCompactList}\small\item\em Performs forward propagation through the layer. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{classLayer_a5560b9ac23c2cd64dfcc834b08c34bf5}{backward}} (const std\+::vector$<$ double $>$ \&grad\+\_\+output, double learning\+\_\+rate)=0
+\begin{DoxyCompactList}\small\item\em Performs backward propagation through the layer. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ \mbox{\hyperlink{classLayer_a9e0e65568aa19b9ab07ee3b75f0e500c}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this layer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classLayer_a57e5a4a6ec188de4e7b8c894aac254ea}{$\sim$\+Layer}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base abstract class for all neural network layers. 
+
+This abstract class defines the interface that all layer implementations must follow. It includes methods for forward propagation, backward propagation, and cloning. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLayer_a57e5a4a6ec188de4e7b8c894aac254ea}\label{classLayer_a57e5a4a6ec188de4e7b8c894aac254ea}} 
+\index{Layer@{Layer}!````~Layer@{$\sim$Layer}}
+\index{````~Layer@{$\sim$Layer}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Layer()}{~Layer()}}
+{\footnotesize\ttfamily virtual Layer\+::$\sim$\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper cleanup in derived classes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLayer_a5560b9ac23c2cd64dfcc834b08c34bf5}\label{classLayer_a5560b9ac23c2cd64dfcc834b08c34bf5}} 
+\index{Layer@{Layer}!backward@{backward}}
+\index{backward@{backward}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Layer\+::backward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{grad\+\_\+output,  }\item[{double}]{learning\+\_\+rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Performs backward propagation through the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grad\+\_\+output} & The gradient from the next layer. \\
+\hline
+{\em learning\+\_\+rate} & The learning rate for parameter updates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The gradient to pass to the previous layer. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDense_ae16d69775b83b8124ddd2abd77f3f2df}{Dense}}, and \mbox{\hyperlink{classActivation_a6933ad3348da56ef287d3246ba72e5fd}{Activation}}.
+
+\mbox{\Hypertarget{classLayer_a9e0e65568aa19b9ab07ee3b75f0e500c}\label{classLayer_a9e0e65568aa19b9ab07ee3b75f0e500c}} 
+\index{Layer@{Layer}!clone@{clone}}
+\index{clone@{clone}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classLayer}{Layer}}$>$ Layer\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a deep copy of this layer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this layer. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDense_a7f77665958b07bf8ed39dd11d7bda278}{Dense}}, and \mbox{\hyperlink{classActivation_a50b15f527fec2c695257c35fdc5fbe99}{Activation}}.
+
+\mbox{\Hypertarget{classLayer_afbd13bc01abb4d1a53282f35724f02c6}\label{classLayer_afbd13bc01abb4d1a53282f35724f02c6}} 
+\index{Layer@{Layer}!forward@{forward}}
+\index{forward@{forward}!Layer@{Layer}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Layer\+::forward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Performs forward propagation through the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector to the layer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output vector from the layer. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDense_a36f8eb116c1f1e51937992bc59b9f4c6}{Dense}}, and \mbox{\hyperlink{classActivation_a3788ff68e9cb9562448456af6def8284}{Activation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{layer_8hpp}{layer.\+hpp}}\end{DoxyCompactItemize}

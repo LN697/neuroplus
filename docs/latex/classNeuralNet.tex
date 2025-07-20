@@ -1,0 +1,185 @@
+\hypertarget{classNeuralNet}{}\doxysection{Neural\+Net Class Reference}
+\label{classNeuralNet}\index{NeuralNet@{NeuralNet}}
+
+
+Main neural network class that manages layers and training.  
+
+
+
+
+{\ttfamily \#include $<$neuralnet.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNeuralNet_a4c301e3b72fa71ac63ab3c7270cfcad4}{add\+Layer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$ layer)
+\begin{DoxyCompactList}\small\item\em Adds a layer to the network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuralNet_a3f3f8fa6aa97364d4e30527bdece0b3b}{set\+Loss}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLoss}{Loss}} $>$ loss)
+\begin{DoxyCompactList}\small\item\em Sets the loss function for the network. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classNeuralNet_ac8f3417d45a26fab39d5851c34126f17}{predict}} (const std\+::vector$<$ double $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Makes a prediction using the network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuralNet_ad09993d8794c889f4749ae917c1d5293}{train}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&inputs, const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&targets, int epochs, double learning\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Trains the network on the provided dataset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuralNet_abd7754b0a6db47f7890e4a433f5e8cd7}{Neural\+Net}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuralNet_aede519a18a622ffbdb385e77997e8dd3}{Neural\+Net}} (const \mbox{\hyperlink{classNeuralNet}{Neural\+Net}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for creating a deep copy of the network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuralNet_adbe18c69074f39aebab43fccb808255c}{save}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Saves the network to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuralNet_a5946e870bcca932d00c75605c825dc12}{load}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads the network from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuralNet_a1dc96d043ee9e07c826dde8658477bf6}{$\sim$\+Neural\+Net}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main neural network class that manages layers and training. 
+
+This class represents a fully-\/connected neural network and provides methods for building, training, and using the network for predictions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNeuralNet_abd7754b0a6db47f7890e4a433f5e8cd7}\label{classNeuralNet_abd7754b0a6db47f7890e4a433f5e8cd7}} 
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{NeuralNet()}{NeuralNet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Neural\+Net\+::\+Neural\+Net (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classNeuralNet_aede519a18a622ffbdb385e77997e8dd3}\label{classNeuralNet_aede519a18a622ffbdb385e77997e8dd3}} 
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\index{NeuralNet@{NeuralNet}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{NeuralNet()}{NeuralNet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Neural\+Net\+::\+Neural\+Net (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNeuralNet}{Neural\+Net}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for creating a deep copy of the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The network to copy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNeuralNet_a1dc96d043ee9e07c826dde8658477bf6}\label{classNeuralNet_a1dc96d043ee9e07c826dde8658477bf6}} 
+\index{NeuralNet@{NeuralNet}!````~NeuralNet@{$\sim$NeuralNet}}
+\index{````~NeuralNet@{$\sim$NeuralNet}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{$\sim$NeuralNet()}{~NeuralNet()}}
+{\footnotesize\ttfamily Neural\+Net\+::$\sim$\+Neural\+Net (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNeuralNet_a4c301e3b72fa71ac63ab3c7270cfcad4}\label{classNeuralNet_a4c301e3b72fa71ac63ab3c7270cfcad4}} 
+\index{NeuralNet@{NeuralNet}!addLayer@{addLayer}}
+\index{addLayer@{addLayer}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{addLayer()}{addLayer()}}
+{\footnotesize\ttfamily void Neural\+Net\+::add\+Layer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLayer}{Layer}} $>$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Adds a layer to the network. 
+
+Layers are executed in the order they are added.
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & The layer to add to the network. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNeuralNet_a5946e870bcca932d00c75605c825dc12}\label{classNeuralNet_a5946e870bcca932d00c75605c825dc12}} 
+\index{NeuralNet@{NeuralNet}!load@{load}}
+\index{load@{load}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Neural\+Net\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads the network from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file containing the saved network. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNeuralNet_ac8f3417d45a26fab39d5851c34126f17}\label{classNeuralNet_ac8f3417d45a26fab39d5851c34126f17}} 
+\index{NeuralNet@{NeuralNet}!predict@{predict}}
+\index{predict@{predict}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Neural\+Net\+::predict (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Makes a prediction using the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The predicted output vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNeuralNet_adbe18c69074f39aebab43fccb808255c}\label{classNeuralNet_adbe18c69074f39aebab43fccb808255c}} 
+\index{NeuralNet@{NeuralNet}!save@{save}}
+\index{save@{save}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Neural\+Net\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Saves the network to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file where the network will be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNeuralNet_a3f3f8fa6aa97364d4e30527bdece0b3b}\label{classNeuralNet_a3f3f8fa6aa97364d4e30527bdece0b3b}} 
+\index{NeuralNet@{NeuralNet}!setLoss@{setLoss}}
+\index{setLoss@{setLoss}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{setLoss()}{setLoss()}}
+{\footnotesize\ttfamily void Neural\+Net\+::set\+Loss (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classLoss}{Loss}} $>$}]{loss }\end{DoxyParamCaption})}
+
+
+
+Sets the loss function for the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loss} & The loss function to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNeuralNet_ad09993d8794c889f4749ae917c1d5293}\label{classNeuralNet_ad09993d8794c889f4749ae917c1d5293}} 
+\index{NeuralNet@{NeuralNet}!train@{train}}
+\index{train@{train}!NeuralNet@{NeuralNet}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void Neural\+Net\+::train (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{inputs,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{targets,  }\item[{int}]{epochs,  }\item[{double}]{learning\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Trains the network on the provided dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & Vector of input vectors for training. \\
+\hline
+{\em targets} & Vector of target (ground truth) vectors. \\
+\hline
+{\em epochs} & Number of training epochs. \\
+\hline
+{\em learning\+\_\+rate} & Learning rate for gradient descent. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{neuralnet_8hpp}{neuralnet.\+hpp}}\item 
+src/\mbox{\hyperlink{neuralnet_8cpp}{neuralnet.\+cpp}}\end{DoxyCompactItemize}

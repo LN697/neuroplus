@@ -1,0 +1,45 @@
+\hypertarget{utils_8cpp}{}\doxysection{src/utils.cpp File Reference}
+\label{utils_8cpp}\index{src/utils.cpp@{src/utils.cpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+Include dependency graph for utils.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceUtils}{Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceUtils_a7028d901e208b52a3ccbb381318afe51}{Utils\+::sigmoid}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the sigmoid activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a2bebed434f32826973d0600cead3857d}{Utils\+::sigmoid\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the sigmoid function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceUtils_a22dac1c294427bec8036a84894ecac47}{Utils\+::initialize\+\_\+random\+\_\+seed}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the random seed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a86d5a5ba30d6003bb11e56f130f20a79}{Utils\+::random\+\_\+weight}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random weight between -\/1.\+0 and 1.\+0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a19e06a2c78dd5e02d89a3184759a81b5}{Utils\+::relu}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the Rectified Linear Unit (Re\+LU) activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_af553636a5415fd2b338baaf19e2551dd}{Utils\+::relu\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the Re\+LU function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_ab9499cd7a94d720605409937a0860a2a}{Utils\+::tanh}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the hyperbolic tangent (tanh) activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_ae4570c8194041effd86a2c00f2ca1509}{Utils\+::tanh\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the tanh function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a0a0ead97770b97f374e268be57e0a5db}{Utils\+::leaky\+\_\+relu}} (double x, double alpha=0.\+01)
+\begin{DoxyCompactList}\small\item\em Computes the Leaky Re\+LU activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a6c6158d873ab2e69f73760b63643ce77}{Utils\+::leaky\+\_\+relu\+\_\+derivative}} (double x, double alpha=0.\+01)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the Leaky Re\+LU function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceUtils_a8725f7fb1b90fa10b0487514658819c2}{Utils\+::softmax}} (std\+::vector$<$ double $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Computes the softmax function for a vector of values. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="Loss" name="Loss">
+<area shape="rect" id="node1" title="Base abstract class for loss functions." alt="" coords="19,5,70,32"/>
+<area shape="rect" id="node2" href="$classMSELoss.html" title="Mean Squared Error (MSE) loss function." alt="" coords="5,80,84,107"/>
+</map>

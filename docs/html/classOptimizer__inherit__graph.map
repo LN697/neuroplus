@@ -1,0 +1,5 @@
+<map id="Optimizer" name="Optimizer">
+<area shape="rect" id="node1" title="Base abstract class for optimization algorithms." alt="" coords="32,5,119,32"/>
+<area shape="rect" id="node2" href="$classAdam.html" title="Adam optimizer." alt="" coords="5,80,65,107"/>
+<area shape="rect" id="node3" href="$classSGD.html" title="Stochastic Gradient Descent optimizer with momentum." alt="" coords="90,80,141,107"/>
+</map>

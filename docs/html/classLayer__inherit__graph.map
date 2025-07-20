@@ -1,0 +1,5 @@
+<map id="Layer" name="Layer">
+<area shape="rect" id="node1" title="Base abstract class for all neural network layers." alt="" coords="69,5,128,32"/>
+<area shape="rect" id="node2" href="$classActivation.html" title="Activation layer that applies a non&#45;linear activation function to inputs." alt="" coords="5,80,93,107"/>
+<area shape="rect" id="node3" href="$classDense.html" title="Fully&#45;connected (dense) layer for neural networks." alt="" coords="118,80,181,107"/>
+</map>

@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and Run Tests",
+			"type": "shell",
+			"command": "cd /home/user/projects/neuroplus && make tests && make run-tests",
+			"group": "test",
+			"problemMatcher": [
+				"$gcc"
+			]
+		}
+	]
+}

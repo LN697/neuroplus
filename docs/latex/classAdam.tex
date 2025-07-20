@@ -1,0 +1,114 @@
+\hypertarget{classAdam}{}\doxysection{Adam Class Reference}
+\label{classAdam}\index{Adam@{Adam}}
+
+
+\mbox{\hyperlink{classAdam}{Adam}} optimizer.  
+
+
+
+
+{\ttfamily \#include $<$optimizer.\+hpp$>$}
+
+
+
+Inheritance diagram for Adam\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classAdam__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Adam\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classAdam__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAdam_a5c0c6714dfe4b128570999faaf31c7fb}{Adam}} (double lr=0.\+001, double b1=0.\+9, double b2=0.\+999, double eps=1e-\/8)
+\begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classAdam}{Adam}} optimizer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdam_a42ac4f035adcc08ddc633e3d9b2cd7b2}{update}} (std\+::vector$<$ double $>$ \&weights, const std\+::vector$<$ double $>$ \&gradients) override
+\begin{DoxyCompactList}\small\item\em Updates weights using the \mbox{\hyperlink{classAdam}{Adam}} algorithm. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ \mbox{\hyperlink{classAdam_a53240425f2750af5c2936dbf766554fa}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this optimizer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classAdam}{Adam}} optimizer. 
+
+This optimizer implements the \mbox{\hyperlink{classAdam}{Adam}} algorithm, which maintains per-\/parameter learning rates based on first and second moment estimates of the gradients. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAdam_a5c0c6714dfe4b128570999faaf31c7fb}\label{classAdam_a5c0c6714dfe4b128570999faaf31c7fb}} 
+\index{Adam@{Adam}!Adam@{Adam}}
+\index{Adam@{Adam}!Adam@{Adam}}
+\doxysubsubsection{\texorpdfstring{Adam()}{Adam()}}
+{\footnotesize\ttfamily Adam\+::\+Adam (\begin{DoxyParamCaption}\item[{double}]{lr = {\ttfamily 0.001},  }\item[{double}]{b1 = {\ttfamily 0.9},  }\item[{double}]{b2 = {\ttfamily 0.999},  }\item[{double}]{eps = {\ttfamily 1e-\/8} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \mbox{\hyperlink{classAdam}{Adam}} optimizer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lr} & The learning rate. \\
+\hline
+{\em b1} & The beta1 coefficient for first moment estimates. \\
+\hline
+{\em b2} & The beta2 coefficient for second moment estimates. \\
+\hline
+{\em eps} & The epsilon value for numerical stability. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAdam_a53240425f2750af5c2936dbf766554fa}\label{classAdam_a53240425f2750af5c2936dbf766554fa}} 
+\index{Adam@{Adam}!clone@{clone}}
+\index{clone@{clone}!Adam@{Adam}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOptimizer}{Optimizer}} $>$ Adam\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of this optimizer. 
+
+\begin{DoxyReturn}{Returns}
+A unique pointer to a new instance of this optimizer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classOptimizer_a36eb62b708643313e48ce6fd2dd5d63e}{Optimizer}}.
+
+\mbox{\Hypertarget{classAdam_a42ac4f035adcc08ddc633e3d9b2cd7b2}\label{classAdam_a42ac4f035adcc08ddc633e3d9b2cd7b2}} 
+\index{Adam@{Adam}!update@{update}}
+\index{update@{update}!Adam@{Adam}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Adam\+::update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{weights,  }\item[{const std\+::vector$<$ double $>$ \&}]{gradients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates weights using the \mbox{\hyperlink{classAdam}{Adam}} algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weights} & The weights to update. \\
+\hline
+{\em gradients} & The gradients used for the update. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOptimizer_a241b55978b42038e5a071d555dfd047d}{Optimizer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{optimizer_8hpp}{optimizer.\+hpp}}\item 
+src/\mbox{\hyperlink{optimizer_8cpp}{optimizer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,219 @@
+\hypertarget{namespaceUtils}{}\doxysection{Utils Namespace Reference}
+\label{namespaceUtils}\index{Utils@{Utils}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceUtils_a7028d901e208b52a3ccbb381318afe51}{sigmoid}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the sigmoid activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a2bebed434f32826973d0600cead3857d}{sigmoid\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the sigmoid function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceUtils_a22dac1c294427bec8036a84894ecac47}{initialize\+\_\+random\+\_\+seed}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the random seed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a86d5a5ba30d6003bb11e56f130f20a79}{random\+\_\+weight}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random weight between -\/1.\+0 and 1.\+0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a19e06a2c78dd5e02d89a3184759a81b5}{relu}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the Rectified Linear Unit (Re\+LU) activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_af553636a5415fd2b338baaf19e2551dd}{relu\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the Re\+LU function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a0a0ead97770b97f374e268be57e0a5db}{leaky\+\_\+relu}} (double x, double alpha=0.\+01)
+\begin{DoxyCompactList}\small\item\em Computes the Leaky Re\+LU activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_a6c6158d873ab2e69f73760b63643ce77}{leaky\+\_\+relu\+\_\+derivative}} (double x, double alpha=0.\+01)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the Leaky Re\+LU function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_ab9499cd7a94d720605409937a0860a2a}{tanh}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the hyperbolic tangent (tanh) activation function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceUtils_ae4570c8194041effd86a2c00f2ca1509}{tanh\+\_\+derivative}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes the derivative of the tanh function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceUtils_a8725f7fb1b90fa10b0487514658819c2}{softmax}} (std\+::vector$<$ double $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Computes the softmax function for a vector of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceUtils_a22dac1c294427bec8036a84894ecac47}\label{namespaceUtils_a22dac1c294427bec8036a84894ecac47}} 
+\index{Utils@{Utils}!initialize\_random\_seed@{initialize\_random\_seed}}
+\index{initialize\_random\_seed@{initialize\_random\_seed}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{initialize\_random\_seed()}{initialize\_random\_seed()}}
+{\footnotesize\ttfamily void Utils\+::initialize\+\_\+random\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the random seed. 
+
+\begin{DoxyNote}{Note}
+This function is now obsolete as the random number generator is self-\/seeding. 
+\end{DoxyNote}
+\mbox{\Hypertarget{namespaceUtils_a0a0ead97770b97f374e268be57e0a5db}\label{namespaceUtils_a0a0ead97770b97f374e268be57e0a5db}} 
+\index{Utils@{Utils}!leaky\_relu@{leaky\_relu}}
+\index{leaky\_relu@{leaky\_relu}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{leaky\_relu()}{leaky\_relu()}}
+{\footnotesize\ttfamily double Utils\+::leaky\+\_\+relu (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{alpha = {\ttfamily 0.01} }\end{DoxyParamCaption})}
+
+
+
+Computes the Leaky Re\+LU activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+{\em alpha} & The slope for negative values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Leaky Re\+LU function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a6c6158d873ab2e69f73760b63643ce77}\label{namespaceUtils_a6c6158d873ab2e69f73760b63643ce77}} 
+\index{Utils@{Utils}!leaky\_relu\_derivative@{leaky\_relu\_derivative}}
+\index{leaky\_relu\_derivative@{leaky\_relu\_derivative}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{leaky\_relu\_derivative()}{leaky\_relu\_derivative()}}
+{\footnotesize\ttfamily double Utils\+::leaky\+\_\+relu\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{alpha = {\ttfamily 0.01} }\end{DoxyParamCaption})}
+
+
+
+Computes the derivative of the Leaky Re\+LU function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+{\em alpha} & The slope for negative values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The derivative of the Leaky Re\+LU function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a86d5a5ba30d6003bb11e56f130f20a79}\label{namespaceUtils_a86d5a5ba30d6003bb11e56f130f20a79}} 
+\index{Utils@{Utils}!random\_weight@{random\_weight}}
+\index{random\_weight@{random\_weight}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{random\_weight()}{random\_weight()}}
+{\footnotesize\ttfamily double Utils\+::random\+\_\+weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random weight between -\/1.\+0 and 1.\+0. 
+
+\begin{DoxyReturn}{Returns}
+A random double value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a19e06a2c78dd5e02d89a3184759a81b5}\label{namespaceUtils_a19e06a2c78dd5e02d89a3184759a81b5}} 
+\index{Utils@{Utils}!relu@{relu}}
+\index{relu@{relu}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{relu()}{relu()}}
+{\footnotesize\ttfamily double Utils\+::relu (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the Rectified Linear Unit (Re\+LU) activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Re\+LU function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_af553636a5415fd2b338baaf19e2551dd}\label{namespaceUtils_af553636a5415fd2b338baaf19e2551dd}} 
+\index{Utils@{Utils}!relu\_derivative@{relu\_derivative}}
+\index{relu\_derivative@{relu\_derivative}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{relu\_derivative()}{relu\_derivative()}}
+{\footnotesize\ttfamily double Utils\+::relu\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the derivative of the Re\+LU function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The derivative of the Re\+LU function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a7028d901e208b52a3ccbb381318afe51}\label{namespaceUtils_a7028d901e208b52a3ccbb381318afe51}} 
+\index{Utils@{Utils}!sigmoid@{sigmoid}}
+\index{sigmoid@{sigmoid}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{sigmoid()}{sigmoid()}}
+{\footnotesize\ttfamily double Utils\+::sigmoid (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the sigmoid activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the sigmoid function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a2bebed434f32826973d0600cead3857d}\label{namespaceUtils_a2bebed434f32826973d0600cead3857d}} 
+\index{Utils@{Utils}!sigmoid\_derivative@{sigmoid\_derivative}}
+\index{sigmoid\_derivative@{sigmoid\_derivative}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{sigmoid\_derivative()}{sigmoid\_derivative()}}
+{\footnotesize\ttfamily double Utils\+::sigmoid\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the derivative of the sigmoid function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The derivative of the sigmoid function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_a8725f7fb1b90fa10b0487514658819c2}\label{namespaceUtils_a8725f7fb1b90fa10b0487514658819c2}} 
+\index{Utils@{Utils}!softmax@{softmax}}
+\index{softmax@{softmax}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{softmax()}{softmax()}}
+{\footnotesize\ttfamily void Utils\+::softmax (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Computes the softmax function for a vector of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The vector of values to be transformed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceUtils_ab9499cd7a94d720605409937a0860a2a}\label{namespaceUtils_ab9499cd7a94d720605409937a0860a2a}} 
+\index{Utils@{Utils}!tanh@{tanh}}
+\index{tanh@{tanh}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{tanh()}{tanh()}}
+{\footnotesize\ttfamily double Utils\+::tanh (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the hyperbolic tangent (tanh) activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the tanh function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceUtils_ae4570c8194041effd86a2c00f2ca1509}\label{namespaceUtils_ae4570c8194041effd86a2c00f2ca1509}} 
+\index{Utils@{Utils}!tanh\_derivative@{tanh\_derivative}}
+\index{tanh\_derivative@{tanh\_derivative}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{tanh\_derivative()}{tanh\_derivative()}}
+{\footnotesize\ttfamily double Utils\+::tanh\+\_\+derivative (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Computes the derivative of the tanh function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The derivative of the tanh function. 
+\end{DoxyReturn}
